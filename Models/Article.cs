@@ -7,21 +7,9 @@ namespace WebApplication1.Models
 {
     public class Article
     {
-        private string title;
-        private string content;
-     
-        public string Title
-        {
-            get { return title; }
-            set { title = value; }
-        }
-
-        public string Content
-        {
-            get { return content; }
-            set { content = value; }
-        }
-
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
 
     }
 }

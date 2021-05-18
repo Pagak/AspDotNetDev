@@ -1,0 +1,15 @@
+﻿@model WebApplication1.ViewModels.ArticleShowModel
+@{
+    ViewBag.Title = Model.Article.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <h2>@Model.Article.Title</h2>
+            <p>@Model.Article.Content</p>
+        </div>
+    </div>
+</div>
+
+
