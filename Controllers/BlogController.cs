@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
@@ -12,7 +13,7 @@ namespace WebApplication1.Controllers
         // GET: Blog
         public ActionResult Index()
         {
-            List<Article> lesArticles = new List<Article>()
+            List<Article> lesArticles = new List<Article>
             {
                 new Article(){Title = "Un article", Content = "Son contenu"},
                 new Article(){Title = "Un article", Content = "Son contenu"},
@@ -21,8 +22,12 @@ namespace WebApplication1.Controllers
                 new Article(){Title = "Un article", Content = "Son contenu"}
             };
 
-            ViewBag.Articles = lesArticles;
-            return View();
+            var model = new BlogViewModel
+            {
+                Articles = lesArticles
+            };
+
+            return View(model);
         }
     }
 }
