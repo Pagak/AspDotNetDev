@@ -5,11 +5,11 @@ namespace WebApplication1.ViewModels
 {
     public class BlogViewModel
     {
-        private IList<Article> articles;
-        public IList<Article> Articles
+        public IList<Article> Articles { get; set; }
+
+        public BlogViewModel() 
         {
-            get { return articles; }
-            set { articles = value; }
+            Articles = new List<Article>();
         }
 
     }
