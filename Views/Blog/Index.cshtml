@@ -1,4 +1,4 @@
-﻿
+﻿@model WebApplication1.ViewModels.BlogViewModel
 @{
     ViewBag.Title = "Blog";
 }
@@ -8,7 +8,7 @@
         <div class="col"><h2>Index</h2></div>
     </div>
     <div class="row">
-        @foreach (var article in ViewBag.Articles)
+        @foreach (var article in Model.Articles)
         {
             <div class="col">
                 <div class="card">
