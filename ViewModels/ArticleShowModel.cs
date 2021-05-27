@@ -8,6 +8,7 @@ namespace WebApplication1.ViewModels
 {
     public class ArticleShowModel
     {
-       public Article Article {get;set;}
+        public Article Article { get; set; }
+        public Category Category { get; set; }
     }
 }

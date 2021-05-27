@@ -33,8 +33,13 @@ namespace WebApplication1.Controllers
                 if (!Id.HasValue)
                     throw new Exception("L'identifiant est inexistant");
 
-                var article = db.Articles.Find(Id.Value);
+                var article = db.Articles.Find(Id.Value);    
                 model.Article = article ?? throw new Exception("L'article demandé n'existe pas.");
+
+                var category = db.Categories.Find(article.CategoryID);
+
+                model.Category = category;
+
                 return View(model);
 
             }catch(Exception e)
