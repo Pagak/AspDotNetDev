@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApplication1.DTOs;
 using WebApplication1.Models;
 
 namespace WebApplication1.ViewModels
 {
-    public class ArticleShowModel
+    public class ArticleEditViewModel
     {
         public Article Article { get; set; }
-        public CategoryShowDTO Category { get; set; }
     }
 }
